@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Inglés</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vocabulario</h1>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="termino" id="termino">Cargando...</div>
+                <div class="estrellas" id="estrellas"></div>
+                
+                <div class="respuesta hidden" id="respuesta">
+                    <div class="pronunciacion" id="pronunciacion"></div>
+                    <div class="significado" id="significado"></div>
+                    <div class="contexto" id="contexto"></div>
+                </div>
+
+                <div class="actions" id="actions">
+                    <button class="btn-reveal" id="btnReveal">Revelar</button>
+                </div>
+
+                <div class="resultados hidden" id="resultados">
+                    <button class="btn-know" id="btnKnow">👍 sabía</button>
+                    <button class="btn-dont-know" id="btnDontKnow">👎 no sabía</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

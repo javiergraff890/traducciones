@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #2563eb;
+    --success: #22c55e;
+    --danger: #ef4444;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.termino {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    min-height: 3rem;
+    transition: opacity 0.3s ease;
+}
+
+.termino.fade-out {
+    opacity: 0;
+}
+
+.estrellas {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.estrella {
+    color: #e2e8f0;
+    transition: color 0.3s ease;
+}
+
+.estrella.filled {
+    color: #f59e0b;
+}
+
+.respuesta {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pronunciacion {
+    font-size: 1.125rem;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+    font-style: italic;
+}
+
+.significado {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.contexto {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.btn-reveal {
+    background: var(--primary);
+    color: white;
+    width: 100%;
+    max-width: 200px;
+}
+
+.btn-reveal:hover {
+    background: #1d4ed8;
+}
+
+.resultados {
+    display: flex;
+    gap: 1rem;
+    animation: fadeIn 0.4s ease;
+}
+
+.btn-know, .btn-dont-know {
+    flex: 1;
+    color: white;
+}
+
+.btn-know {
+    background: var(--success);
+}
+
+.btn-know:hover {
+    background: #16a34a;
+}
+
+.btn-dont-know {
+    background: var(--danger);
+}
+
+.btn-dont-know:hover {
+    background: #dc2626;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .termino {
+        font-size: 1.5rem;
+    }
+    
+    .significado {
+        font-size: 1.125rem;
+    }
+}
